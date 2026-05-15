@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pnpm lint || npx --yes eslint . || echo \"[hook] eslint not runnable yet (pnpm install pending)\"",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(pnpm install:*)",
+      "Bash(pnpm lint:*)",
+      "Bash(pnpm test:*)",
+      "Bash(pnpm test\\:jest:*)",
+      "Bash(pnpm test\\:jest\\:coverage:*)",
+      "Bash(pnpm dev:*)",
+      "Bash(pnpm build:*)",
+      "Bash(npx --yes eslint:*)",
+      "Bash(npx jest:*)",
+      "Bash(node_modules/.bin/jest:*)",
+      "PowerShell(pnpm test\\:* *)",
+      "PowerShell(pnpm test\\:jest *)",
+      "PowerShell(pnpm test\\:jest\\:coverage *)",
+      "PowerShell(pnpm lint *)",
+      "PowerShell(node_modules/.bin/jest *)"
+    ],
+    "deny": [
+      "Bash(rm -rf /*)",
+      "Bash(rm -rf ~*)",
+      "Bash(rm -rf $HOME*)",
+      "Bash(curl * | sh*)",
+      "Bash(curl * | bash*)",
+      "Bash(wget * | sh*)",
+      "Bash(wget * | bash*)",
+      "Bash(dd if=* of=/dev/*)",
+      "Bash(mkfs.*)",
+      "Bash(chmod -R 777 /*)",
+      "PowerShell(Remove-Item -Recurse -Force C:\\*)",
+      "PowerShell(Remove-Item -Recurse -Force /*)",
+      "PowerShell(Invoke-Expression *)",
+      "PowerShell(iex *)",
+      "PowerShell(Format-Volume*)",
+      "PowerShell(Stop-Computer*)",
+      "PowerShell(Restart-Computer*)"
+    ]
+  }
+}

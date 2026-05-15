@@ -1,0 +1,3 @@
+- [Project scope](scope.md) — EMI Code Challenge: Tasks 1–10 + Bonus, React stack, json-server mock.
+- [Routing map](routing.md) — Which agent handles which keyword set.
+- [Architecture rule](architecture.md) — Feature-sliced, unidirectional deps, aliases.

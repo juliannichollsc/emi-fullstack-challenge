@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-emi-cream font-sans text-emi-ink-800 antialiased;
+  }
+
+  /* Skip link */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[999]
+           focus:bg-emi-red-700 focus:text-white focus:px-4 focus:py-2 focus:rounded-md
+           focus:shadow-glow-red;
+  }
+
+  /* Focus ring — global */
+  :focus-visible {
+    @apply outline-none ring-2 ring-emi-red-700 ring-offset-2 ring-offset-emi-cream;
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Base input style */
+  .input {
+    @apply w-full rounded-md border border-emi-ink-200 bg-white px-3 py-2 text-sm
+           text-emi-ink-800 placeholder:text-emi-ink-400
+           transition-[border-color,box-shadow] duration-base ease-emi
+           focus:outline-none focus:border-emi-red-700 focus:ring-2 focus:ring-emi-red-700/20;
+  }
+
+  .input[aria-invalid='true'] {
+    @apply border-emi-red-600 ring-2 ring-emi-red-600/20;
+  }
+
+  /* Button variants */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-md bg-emi-red-700 px-4 py-2 text-sm
+           font-medium text-white shadow-sm
+           transition-[background-color,box-shadow,transform] duration-base ease-emi
+           hover:bg-emi-red-800 hover:shadow-card-hover active:scale-[0.98]
+           focus-visible:ring-2 focus-visible:ring-emi-red-700 focus-visible:ring-offset-2
+           disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-md border border-emi-ink-200 bg-white
+           px-4 py-2 text-sm font-medium text-emi-ink-700 shadow-sm
+           transition-[background-color,box-shadow,transform] duration-base ease-emi
+           hover:bg-emi-ink-50 hover:border-emi-ink-300 active:scale-[0.98]
+           focus-visible:ring-2 focus-visible:ring-emi-red-700 focus-visible:ring-offset-2
+           disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center gap-2 rounded-md border border-emi-red-200 bg-white
+           px-4 py-2 text-sm font-medium text-emi-red-700 shadow-sm
+           transition-[background-color,box-shadow,transform] duration-base ease-emi
+           hover:bg-emi-red-50 hover:border-emi-red-300 active:scale-[0.98]
+           focus-visible:ring-2 focus-visible:ring-emi-red-700 focus-visible:ring-offset-2
+           disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+
+  /* Card */
+  .card {
+    @apply rounded-xl bg-white shadow-card border border-emi-ink-100/60;
+  }
+
+  /* State badges */
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+}
+
+@layer utilities {
+  /* Perspective for 3D card hover */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  /* Text balance for titles */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Hide scrollbar but keep scrollable */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

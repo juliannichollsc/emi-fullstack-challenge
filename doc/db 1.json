@@ -1,0 +1,94 @@
+{
+  "tasks": [
+    {
+      "title": "Complete Project Proposal",
+      "description": "Prepare and submit the project proposal for approval.",
+      "dueDate": "2023-12-15",
+      "completed": false,
+      "stateHistory": [
+        {"state": "new", "date": "2023-12-01"},
+        {"state": "active", "date": "2023-12-05"}
+      ],
+      "notes": [
+        "Check proposal guidelines",
+        "Include budget estimates"
+      ]
+    },
+    {
+      "title": "Design Wireframes",
+      "description": "Create wireframes for the user interface.",
+      "dueDate": "2023-12-20",
+      "completed": false,
+      "stateHistory": [
+        {"state": "new", "date": "2023-12-02"},
+        {"state": "active", "date": "2023-12-06"}
+      ],
+      "notes": [
+        "Review design patterns",
+        "Seek feedback from the team"
+      ]
+    },
+    {
+      "title": "Implement User Authentication",
+      "description": "Develop user authentication functionality.",
+      "dueDate": "2023-12-25",
+      "completed": false,
+      "stateHistory": [
+        {"state": "new", "date": "2023-12-03"},
+        {"state": "active", "date": "2023-12-07"}
+      ],
+      "notes": [
+        "Research secure authentication methods",
+        "Implement password hashing"
+      ]
+    },
+    {
+      "title": "Write API Documentation",
+      "description": "Document the RESTful API for external developers.",
+      "dueDate": "2023-12-30",
+      "completed": false,
+      "stateHistory": [
+        {"state": "new", "date": "2023-12-04"},
+        {"state": "active", "date": "2023-12-08"}
+      ],
+      "notes": [
+        "Use Swagger/OpenAPI for documentation",
+        "Provide clear examples"
+      ]
+    },
+    {
+      "title": "Bug Fixes and Testing",
+      "description": "Address reported bugs and perform thorough testing.",
+      "dueDate": "2024-01-05",
+      "completed": false,
+      "stateHistory": [
+        {"state": "new", "date": "2023-12-05"},
+        {"state": "active", "date": "2023-12-09"}
+      ],
+      "notes": [
+        "Create test cases for critical scenarios",
+        "Perform regression testing"
+      ]
+    },
+    {
+      "title": "Project Deployment",
+      "description": "Prepare for and deploy the project to production.",
+      "dueDate": "2024-01-10",
+      "completed": false,
+      "stateHistory": [
+        {"state": "new", "date": "2023-12-06"},
+        {"state": "active", "date": "2023-12-10"}
+      ],
+      "notes": [
+        "Coordinate with DevOps for deployment",
+        "Monitor performance after deployment"
+      ]
+    }
+  ],
+  "states": [
+    {"name": "new"},
+    {"name": "active"},
+    {"name": "resolved"},
+    {"name": "closed"}
+  ]
+}

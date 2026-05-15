@@ -1,0 +1,5 @@
+- [Testing scope](scope.md) — Which units to test first.
+- [Conventions](conventions.md) — Where tests live and how they're named.
+- [Coexistence with Vitest](coexistence.md) — Both runners must stay green.
+- [Provider error-branch patterns](provider-error-branches.md) — Patterns for covering Context Provider catch/error branches (jest-tester B).
+- [GSAP branch patterns](gsap-branch-patterns.md) — Covering GSAP/useGSAP animation branches in jsdom: capture-then-invoke, direct import vs requireMock pitfall, matchMedia cleanup, SVG ref patching, React Router v6 future flags (jest-tester A).
